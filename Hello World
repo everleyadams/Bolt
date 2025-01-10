@@ -1,17 +1,12 @@
-//Programmer: Everley Adams
+//Programmer: Evan Smith
 //Date: 1.8.2025
 //Program: Hello World
-//Hardware: Bolt
-
-
-async function startProgram() {
-	// Write code here
+//Hardware: Bolt #CF6D
 
 async function startProgram() {
-	await speak("Hello World", true);
-	setMainLed({ r: 0, g: 0, b: 255});
+	await speak("Lions going to the Super Bowl", true);
+	setMainLed({ r: 255, g: 0, b: 0});
 	setSpeed(60);
-	await delay (2);
+	await delay (4.25);
 	setSpeed(0);
-
 }
