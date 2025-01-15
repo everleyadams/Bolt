@@ -3,16 +3,17 @@
 //Program: Pre-Competition
 //Hardware: Bolt #CF6D
 
+//Begin Program
+async function startProgram() {
+
 //Start and Say Start
 //Bolt will say Start acrossed the LED's & say it our loud
 //Driver:Evan
 //Navigator:Everley
 
 
-async function startProgram() {
- await scrollMatrixText('Start!', { r: 43, g: 211, b: 255 }, 15, true);
+	await scrollMatrixText('Start!', { r: 43, g: 211, b: 255 }, 15, true);
 	await speak("Start", true);
-}
 
 
 //Red
@@ -20,9 +21,7 @@ async function startProgram() {
 //Driver:Everley
 //Navigator:Evan
 
-
-
-
+ 	setMainLed({ r: 255, g: 0, b: 0 });
 //Forward & turn 90 degrees and forward again
 //Driver:Evan
 //Navigator:Everley
@@ -33,3 +32,7 @@ async function startProgram() {
 //Play Sound
 //Driver:Everley
 //Navigator:Evan
+
+
+//End Program
+}
