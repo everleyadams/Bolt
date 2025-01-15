@@ -1,33 +1,35 @@
-//Team Members: Everley Adams & Evan Smith
-//Date:1.14.2025
+//Team Members: Evan Smith & Everley Adams
+//Date: 1.14.2025
 //Program: Pre-Competition
-//Hardware: Bolt #
+//Hardware: Bolt #CF6D
 
-//Start
-//Bolt will say Start acrossed the LED's
-//Driver: Evan Smith
-//Navigator:Everley Adams
+//Start and Say Start
+//Bolt will say Start acrossed the LED's & say it our loud
+//Driver:Evan
+//Navigator:Everley
 
 
-
+async function startProgram() {
+ await scrollMatrixText('Start!', { r: 43, g: 211, b: 255 }, 15, true);
+	await speak("Start", true);
+}
 
 
 //Red
-//Bolts LED will turn red
-//Driver: Everley Adams
-//Navigator: Evan Smith
+//Bolt LED will turn Red
+//Driver:Everley
+//Navigator:Evan
 
 
 
 
-
-//Forward and turn 90 degrees & forward again
-//Driver: Evan Smith
-//Navigator: Everley Adams
-
+//Forward & turn 90 degrees and forward again
+//Driver:Evan
+//Navigator:Everley
 
 
 
-//Play sound
-//Driver: Everley Adams
-//Navigator: Evan Smith
+
+//Play Sound
+//Driver:Everley
+//Navigator:Evan
