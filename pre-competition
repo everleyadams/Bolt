@@ -5,9 +5,7 @@
 
 //Begin Program
 async function startProgram() {
-
 /*
-
 //Start and Say Start
 //Bolt will say Start acrossed the LED's & say it our loud
 //Driver:Evan
@@ -33,13 +31,39 @@ async function startProgram() {
 	setSpeed(0);
 	await roll((getHeading() + 90), 60, 2);
 
-*/
-	
 //Play Sound
 //Driver:Everley
 //Navigator:Evan
 
- 	await Sound.Animal.Monkey.play(true);
+	await Sound.Animal.Monkey.play(true);
+*/
+
+//Figure Eight
+//Driver: Evan
+//Navigator: Everley
+
+	setSpeed(60);
+	await delay (1.5);
+	setSpeed(0);
+	await roll((getHeading() + 45), 60, .6);
+	await roll((getHeading() + 45), 60, .6);
+	await roll((getHeading() + 45), 60, .6);
+	await roll((getHeading() + 45), 60, .6);
+	await roll((getHeading() + 60), 60, .8);
+	await roll((getHeading() - 60), 60, 0);
+	await roll((getHeading() - 45), 60, .6);
+	await roll((getHeading() - 45), 60, .6);
+	await roll((getHeading() - 45), 60, .6);
+	await roll((getHeading() - 45), 60, .6);
+	await roll((getHeading() - 45), 60, .6);
+	await roll((getHeading() - 60), 60, .8);
+
+
+//Star
+//Driver: Evan
+//Navigator: Everley
+
+
 
 //End Program
 }
