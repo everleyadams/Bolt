@@ -6,6 +6,8 @@
 //Begin Program
 async function startProgram() {
 
+/*
+
 //Start and Say Start
 //Bolt will say Start acrossed the LED's & say it our loud
 //Driver:Evan
@@ -31,10 +33,13 @@ async function startProgram() {
 	setSpeed(0);
 	await roll((getHeading() + 90), 60, 2);
 
+*/
+	
 //Play Sound
 //Driver:Everley
 //Navigator:Evan
 
+ 	await Sound.Animal.Monkey.play(true);
 
 //End Program
 }
