@@ -26,8 +26,10 @@ async function startProgram() {
 //Driver:Evan
 //Navigator:Everley
 
-
-
+	setSpeed(60);
+	await delay (2);
+	setSpeed(0);
+	await roll((getHeading() + 90), 60, 2);
 
 //Play Sound
 //Driver:Everley
