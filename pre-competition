@@ -36,7 +36,7 @@ async function startProgram() {
 //Navigator:Evan
 
 	await Sound.Animal.Monkey.play(true);
-*/
+
 
 //Figure Eight
 //Driver: Evan
@@ -93,12 +93,62 @@ async function startProgram() {
 	}
 
 
-
+*/
 
 //Star
 //Driver: Evan
 //Navigator: Everley
+		// Optimized for BOLT
+	// Optimized for BOLT
+async function startProgram() {
+	setMainLed({ r: 0, g: 133, b: 202 });
+	await turn(12);
+	await rollDistance(12, 113, 7);
+	await rollDistance(13, 35, 6);
+	await comeToStop();
+	await turn(181);
+	await rollDistance(181, 35, 10);
+	await comeToStop();
+	await turn(310);
+	await rollDistance(310, 113, 7);
+	await rollDistance(312, 35, 6);
+	await comeToStop();
+	await turn(87);
+	await rollDistance(87, 35, 10);
+	await comeToStop();
+	await turn(242);
+	await rollDistance(242, 113, 7);
+	await rollDistance(232, 35, 6);
+	await comeToStop();
+	exitProgram();
+}
 
+var MIN_SPEED = 5.0;
+var minSpeedSq = MIN_SPEED ** 2;
+
+async function comeToStop() {
+	stopRoll();
+
+	while ((getVelocity().x ** 2) + (getVelocity().y ** 2) > minSpeedSq) {
+		await delay(0.025);
+	}
+}
+
+async function turn(heading) {
+	setHeading(heading);
+	await delay(0.5);
+}
+
+async function rollDistance(heading, speed, distance) {
+	await roll(heading, speed);
+
+	var distanceSq = distance ** 2;
+	var startLocation = getLocation();
+
+	while (((getLocation().x - startLocation.x) ** 2) + ((getLocation().y - startLocation.y) ** 2) < distanceSq) {
+		await delay(0.025);
+	}
+}
 
 
 //End Program
