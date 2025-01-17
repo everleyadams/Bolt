@@ -42,21 +42,57 @@ async function startProgram() {
 //Driver: Evan
 //Navigator: Everley
 
-	setSpeed(60);
-	await delay (1.5);
-	setSpeed(0);
-	await roll((getHeading() + 45), 60, .6);
-	await roll((getHeading() + 45), 60, .6);
-	await roll((getHeading() + 45), 60, .6);
-	await roll((getHeading() + 45), 60, .6);
-	await roll((getHeading() + 60), 60, .8);
-	await roll((getHeading() - 60), 60, 0);
-	await roll((getHeading() - 45), 60, .6);
-	await roll((getHeading() - 45), 60, .6);
-	await roll((getHeading() - 45), 60, .6);
-	await roll((getHeading() - 45), 60, .6);
-	await roll((getHeading() - 45), 60, .6);
-	await roll((getHeading() - 60), 60, .8);
+	// Optimized for BOLT
+
+	// Optimized for BOLT
+
+	setMainLed({ r: 0, g: 133, b: 202 });
+	await turn(15);
+	await rollDistance(15, 35, 4);
+	await rollDistance(47, 35, 7);
+	await rollDistance(103, 35, 7);
+	await rollDistance(170, 35, 7);
+	await rollDistance(223, 113, 7);
+	await rollDistance(216, 35, 11);
+	await comeToStop();
+	await turn(128);
+	await rollDistance(128, 35, 10);
+	await comeToStop();
+	await turn(2);
+	await rollDistance(2, 35, 4);
+	await rollDistance(320, 113, 7);
+	await rollDistance(324, 35, 15);
+	await comeToStop();
+	exitProgram();
+}
+
+	var MIN_SPEED = 5.0;
+	var minSpeedSq = MIN_SPEED ** 2;
+
+	async function comeToStop() {
+	stopRoll();
+
+	while ((getVelocity().x ** 2) + (getVelocity().y ** 2) > minSpeedSq) {
+		await delay(0.025);
+	}
+}
+
+	async function turn(heading) {
+	setHeading(heading);
+	await delay(0.5);
+}
+
+	async function rollDistance(heading, speed, distance) {
+	await roll(heading, speed);
+
+	var distanceSq = distance ** 2;
+	var startLocation = getLocation();
+
+	while (((getLocation().x - startLocation.x) ** 2) + ((getLocation().y - startLocation.y) ** 2) < distanceSq) {
+		await delay(0.025);
+	}
+
+
 
 
 //Star
