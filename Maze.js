@@ -22,9 +22,11 @@ async function startProgram() {
 //Navigator:Everley
 
 	setSpeed(60);
-	await delay (2.7);
+	await delay (2.5);
 	setSpeed(0);
 	setMainLed({ r: 0, g: 255, b: 0 });
+	setSpeed(0);
+	await delay (1.5);
 
 
 
@@ -33,8 +35,9 @@ async function startProgram() {
 //Driver:Everley
 //Navigator:Evan
 
-
-
+	await roll((getHeading() + 90), 60, 1.8);
+	await roll((getHeading() + 90), 60, 1.5);
+	await Sound.Animal.Monkey.play(true);
 
 
 //Red Checkpoint
