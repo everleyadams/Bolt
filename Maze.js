@@ -21,7 +21,10 @@ async function startProgram() {
 //Driver:Evan
 //Navigator:Everley
 
-
+	setSpeed(60);
+	await delay (2.7);
+	setSpeed(0);
+	setMainLed({ r: 0, g: 255, b: 0 });
 
 
 
