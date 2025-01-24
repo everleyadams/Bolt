@@ -11,6 +11,9 @@ async function startProgram() {
 //Driver:Everley
 //Navigator:Evan
 
+	await scrollMatrixText('Start!', { r: 43, g: 211, b: 255 }, 15, true);
+	await speak("Start", true);
+
 
 
 //Green Checkpoint
