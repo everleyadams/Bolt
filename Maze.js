@@ -59,6 +59,16 @@ async function startProgram() {
 //Driver:Everley
 //Navigator:Evan
 
+	setSpeed(28);
+	await delay (1.1);
+	setSpeed(0);
+	await delay (1);
+	await roll((getHeading() - 90), 28, 3.2);
+	await roll((getHeading() + 90), 28, 2);
+	await Sound.RobotTalk.EnemyDetected.play(true);
+
+
+
 
 
 
