@@ -54,9 +54,6 @@ async function startProgram() {
 	await roll((getHeading() - 90), 28, 1);
 	setMainLed({ r: 255, g: 0, b: 0 });
 
-
-
-
 //Sound #2 Checkpoint
 //Bolt makes sound of choice - Update Sound
 //Driver:Everley
