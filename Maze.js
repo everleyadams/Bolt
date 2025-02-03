@@ -34,7 +34,7 @@ async function startProgram() {
 //Driver:Everley
 //Navigator:Evan
 
-	await roll((getHeading() + 90), 49, 2.4);
+	await roll((getHeading() + 90), 49, 2.6);
 	setSpeed(0);
 	await delay (1);
 	await roll((getHeading() + 90), 42, 1.25);
@@ -48,7 +48,7 @@ async function startProgram() {
 //Driver:Evan
 //Navigator:Everley
 
-	await roll((getHeading() + 40), 28, 3.2);
+	await roll((getHeading() + 40), 28, 3.3);
 	setSpeed(0);
 	await delay (1);
 	await roll((getHeading() - 90), 28, 1);
@@ -60,7 +60,7 @@ async function startProgram() {
 //Navigator:Evan
 
 	setSpeed(27);
-	await delay (1.12);
+	await delay (1.2);
 	setSpeed(0);
 	await delay (1);
 	await roll((getHeading() - 90), 29, 3.45);
@@ -88,7 +88,11 @@ async function startProgram() {
 //Bolt makes sound of choice - Update Sound
 //Driver:Everley
 //Navigator:Evan
-
+		await roll((getHeading() - 95), 29, 3.4);
+		setSpeed(0);
+		await delay (0.7);
+		await roll((getHeading() - 90), 28, 3);
+		await Sound.Animal.Lion.play(true);
 
 
 
