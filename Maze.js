@@ -22,7 +22,7 @@ async function startProgram() {
 //Navigator:Everley
 
 	setSpeed(37);
-	await delay (4.55);
+	await delay (4.65);
 	setSpeed(0);
 	await delay (1.5);
 	setMainLed({ r: 0, g: 255, b: 0 });
@@ -60,7 +60,7 @@ async function startProgram() {
 //Navigator:Evan
 
 	setSpeed(27);
-	await delay (1.05);
+	await delay (1.12);
 	setSpeed(0);
 	await delay (1);
 	await roll((getHeading() - 90), 29, 3.45);
@@ -78,7 +78,7 @@ async function startProgram() {
 //Navigator:Everley
 
 	setSpeed(28);
-	await delay (0.75);
+	await delay (1.05);
 	setSpeed(0);
 	await delay (1);
 	await roll((getHeading() + 60), 27, 1.9);
