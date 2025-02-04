@@ -22,7 +22,7 @@ async function startProgram() {
 //Navigator:Everley
 
 	setSpeed(37);
-	await delay (4.65);
+	await delay (4.55);
 	setSpeed(0);
 	await delay (1.5);
 	setMainLed({ r: 0, g: 255, b: 0 });
@@ -34,7 +34,7 @@ async function startProgram() {
 //Driver:Everley
 //Navigator:Evan
 
-	await roll((getHeading() + 90), 49, 2.6);
+	await roll((getHeading() + 90), 49, 2.5);
 	setSpeed(0);
 	await delay (1);
 	await roll((getHeading() + 90), 42, 1.25);
@@ -51,7 +51,6 @@ async function startProgram() {
 	await roll((getHeading() + 40), 28, 3.3);
 	setSpeed(0);
 	await delay (1);
-	await roll((getHeading() - 90), 28, 1);
 	setMainLed({ r: 255, g: 0, b: 0 });
 
 //Sound #2 Checkpoint
@@ -59,12 +58,10 @@ async function startProgram() {
 //Driver:Everley
 //Navigator:Evan
 
-	setSpeed(27);
-	await delay (1.2);
+	await roll((getHeading() - 90), 28, 2);
 	setSpeed(0);
 	await delay (1);
 	await roll((getHeading() - 90), 29, 3.45);
-	await roll((getHeading() + 90), 28, 2.1);
 	await Sound.RobotTalk.EnemyDetected.play(true);
 
 
@@ -77,11 +74,10 @@ async function startProgram() {
 //Driver:Evan
 //Navigator:Everley
 
-	setSpeed(28);
-	await delay (1.05);
-	setSpeed(0);
-	await delay (1);
-	await roll((getHeading() + 60), 27, 1.9);
+	await roll((getHeading() + 90), 28, 2.4);
+    setSpeed(0);
+	await delay (0.7);
+	await roll((getHeading() + 55), 27, 1.9);
 	setMainLed({ r: 255, g: 0, b: 255 });
 
 //Sound #3 Checkpoint
