@@ -22,7 +22,7 @@ async function startProgram() {
 //Navigator:Everley
 
 	setSpeed(37);
-	await delay (4.55);
+	await delay (4.45);
 	setSpeed(0);
 	await delay (1.5);
 	setMainLed({ r: 0, g: 255, b: 0 });
@@ -37,7 +37,7 @@ async function startProgram() {
 	await roll((getHeading() + 90), 49, 2.5);
 	setSpeed(0);
 	await delay (1);
-	await roll((getHeading() + 90), 42, 1.25);
+	await roll((getHeading() + 90), 42, 1.35);
 	await Sound.Animal.Monkey.play(true);
 	setSpeed(0);
 	await delay (1);
@@ -58,7 +58,7 @@ async function startProgram() {
 //Driver:Everley
 //Navigator:Evan
 
-	await roll((getHeading() - 90), 28, 2);
+	await roll((getHeading() - 90), 28, 1.7);
 	setSpeed(0);
 	await delay (1);
 	await roll((getHeading() - 90), 29, 3.3);
@@ -74,20 +74,20 @@ async function startProgram() {
 //Driver:Evan
 //Navigator:Everley
 
-	await roll((getHeading() + 90), 28, 2.4);
+	await roll((getHeading() + 90), 28, 2.55);
     setSpeed(0);
 	await delay (0.7);
-	await roll((getHeading() + 55), 27, 1.5);
+	await roll((getHeading() + 53), 27, 1.7);
 	setMainLed({ r: 255, g: 0, b: 255 });
 
 //Sound #3 Checkpoint
 //Bolt makes sound of choice - Update Sound
 //Driver:Everley
 //Navigator:Evan
-		await roll((getHeading() - 95), 29, 3);
+		await roll((getHeading() - 95), 29, 2.9);
 		setSpeed(0);
 		await delay (0.7);
-		await roll((getHeading() - 90), 28, 2.4);
+ 		await roll((getHeading() - 90), 28, 2.25);
 		await Sound.Animal.Lion.play(true);
 
 
