@@ -74,20 +74,20 @@ async function startProgram() {
 //Driver:Evan
 //Navigator:Everley
 
-	await roll((getHeading() + 90), 28, 2.55);
+	await roll((getHeading() + 90), 32, 2.35);
     setSpeed(0);
 	await delay (0.7);
-	await roll((getHeading() + 53), 27, 1.7);
+	await roll((getHeading() + 53), 27, 1.53);
 	setMainLed({ r: 255, g: 0, b: 255 });
 
 //Sound #3 Checkpoint
 //Bolt makes sound of choice - Update Sound
 //Driver:Everley
 //Navigator:Evan
-		await roll((getHeading() - 95), 29, 2.9);
+		await roll((getHeading() - 90), 32, 2.65);
 		setSpeed(0);
 		await delay (0.7);
- 		await roll((getHeading() - 90), 28, 2.25);
+ 		await roll((getHeading() - 90), 28, 2.18);
 		await Sound.Animal.Lion.play(true);
 
 
